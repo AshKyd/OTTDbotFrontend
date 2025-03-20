@@ -67,6 +67,10 @@ const colours = {
     color: "white",
     background: "black",
   },
+  none: {
+    color: "black",
+    background: "#ccc",
+  },
 };
 
 const opposite = {
@@ -74,11 +78,7 @@ const opposite = {
   white: "#0004",
 };
 
-export default function CompanyColour({ colour, children }) {
-  const htmlColour = colour
-    .replace("pale", "light")
-    .replace(" ", "")
-    .toLowerCase();
+export default function CompanyColour({ colour = "none", children }) {
   return (
     <div
       className="company-colour"

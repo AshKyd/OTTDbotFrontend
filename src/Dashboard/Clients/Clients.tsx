@@ -2,8 +2,6 @@ import { fetchWithAuth } from "../../utils";
 import CompanyColour from "../CompanyColour/CompanyColour";
 import words from "./words.json";
 
-const usernameMaxLength = 24;
-
 export default function Clients({ clients, companies, adminAuthValue }) {
   const hydratedClients = Object.values(clients)
     .filter((data) => data.id > 1)
@@ -95,8 +93,8 @@ export default function Clients({ clients, companies, adminAuthValue }) {
                 <td>{id}</td>
                 <td>{name}</td>
                 <td>
-                  <CompanyColour colour={company.colour}>
-                    {company.name}
+                  <CompanyColour colour={company?.colour}>
+                    {company?.name || "no company"}
                   </CompanyColour>
                 </td>
                 <td>{geo}</td>
