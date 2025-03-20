@@ -34,13 +34,6 @@ body {
   }
 }
 
-/* // style-root */
-
-/* 
-	--c-grey => --border
-	--c-white => --background
-	--c-black => --text
-*/
 body {
   * {
     box-sizing: border-box;
@@ -73,10 +66,13 @@ body {
     }
   }
 
-  .buttons {
+  .builder__buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 2px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   label {
@@ -132,6 +128,13 @@ body {
     width: 100%;
     border: none;
     border-bottom: 1px solid var(--border);
+  }
+
+  .builder__centre-modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 
   table {

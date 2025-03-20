@@ -40,6 +40,14 @@ export default function Dashboard({ adminAuthValue }) {
         companies={data.companies}
         adminAuthValue={adminAuthValue}
       />
+      <button
+        onClick={() => {
+          localStorage.clear();
+          window.location.reload();
+        }}
+      >
+        Log out
+      </button>
     </>
   );
 }

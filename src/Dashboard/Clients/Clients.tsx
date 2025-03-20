@@ -102,7 +102,7 @@ export default function Clients({ clients, companies, adminAuthValue }) {
                 <td>{joindate}</td>
                 <td>{lang}</td>
                 <td>
-                  <ul>
+                  <ul class="builder__buttons">
                     <li>
                       <button
                         data-id={id}
@@ -112,6 +112,8 @@ export default function Clients({ clients, companies, adminAuthValue }) {
                       >
                         Kick
                       </button>
+                    </li>
+                    <li>
                       <button
                         data-id={id}
                         data-action="ban"
@@ -120,9 +122,13 @@ export default function Clients({ clients, companies, adminAuthValue }) {
                       >
                         Ban
                       </button>
+                    </li>
+                    <li>
                       <button data-id={id} data-name={name} onClick={doRename}>
                         Rename
                       </button>
+                    </li>
+                    <li>
                       <button data-id={id} data-name={name} onClick={doMessage}>
                         DM
                       </button>
